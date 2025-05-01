@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drewhouse clone</title>
+
+    <link rel="icon" href="assets/sample_icon.png">
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <link rel="stylesheet" href="assets/shop.css">
+
+    <link rel="stylesheet" href="assets/scrapbook.css">
+
+    <link rel="stylesheet" href="assets/garage.css">
+
+
+</head>
+<body>
+    <header id="header" >
+        
+        <img src="assets/sample_logo.png" alt="logo" >
+
+        <nav id="nav" style="display: none;" >
+            <ul class="nav-links">
+
+                <li class="list"><a href="#" onclick="showShop(event)" class="anchor">Shop</a></li>
+                <li class="list"><a href="#"onclick="showNewar()" class="anchor">New arrivals</a></li>
+                <li class="list"><a href="#" onclick="showScrap()" class="anchor">Scrapbook</a></li>
+                <li class="list"><a href="#"  onclick="showGarage() " class="sale">Garage sale</a></li>
+                <li class="list"><a href="#"   onclick="logout()" class="logout">logOut</a></li>
+                
+                
+
+            </ul>
+        </nav>
+
+        
+       
+    </header>
+
+    <form action="" id="showLogin"  onsubmit="login(event)">
+        <div class="login-form">
+            <h1>LogIn</h1>
+        
+            <div class="login-content">
+                <input type="email" name="" id="email" placeholder="Email" required>
+
+               <input type="password" name="" id="password" placeholder="Password" required min="4">
+
+               <a href="#">Forgot password</a>
+
+              
+               <div class="btn-content">
+                <input type="submit" class="btn-signup" value="signin" >
+                <a href="#" >Create account</a>
+
+               </div>
+            </div> 
+        </div>
+
+    </form>
+
+    <div id="cover" style="display: none;">
+        
+
+            <div class="cover">
+                <img src="assets/sample_imgleft.png" alt="">
+
+                <h4>Your wardrobe is your armor. With Drew House, <br>
+                    you’re always dressed to win the day.</h4>
+            </div>
+
+            <div class="img-right">
+
+                <img src="assets/sample_imgright.jpg" alt="">
+                
+            </div>
+
+            
+        
+    </div>
+
+    <section class="shop" id="shop" style="display: none;">
+        <div class="shop_page">
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-1.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+                    <h1>mascot hoodie 
+                    </h1>
+                </div>
+
+                <div class="btn_press">
+                   
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    
+                    <img src="assets/sample_product-2.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 8, 999.00</p>
+                    <h1>infinite joy buucle </h1>
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-3.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 2, 100.00</p>
+                    <h1>mini drew mascot </h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-4.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 4, 999.00</p>
+                    <h1>corduroy ss shirt </h1>
+                </div>
+
+                <div class="btn_press">
+                 
+                 <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-5.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 2, 100.00</p>
+                    <h1>mascot tee lavander</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-6.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 2, 100.00</p>
+                    <h1>love tee lavander</h1>
+                </div>
+
+                <div class="btn_press">
+                  
+                    
+                 <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-7.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 6, 899.00</p>
+                    <h1>corduroy shirt lavander </h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                  
+                 <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-8.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 21, 500.00</p>
+                    <h1>mascot amethyst</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-9.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 9, 500.00</p>
+                    <h1>infinite boxy </h1>
+                </div>
+
+                <div class="btn_press">
+                   
+                   
+                 <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-10.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 10, 000.00</p>
+                    <h1>mascot hoodie lavander</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                 <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_product-11.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 9, 500.00</p>
+                    <h1>infinite joy crewneck</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_short-1.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3, 000.00</p>
+                    <h1>infinite joy boxy crewneck</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_short-2.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3, 000.00</p>
+                    <h1>secret pool short</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_short-3.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3, 000.00</p>
+                    <h1>magic pool short</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_cup-1.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 2, 000.00</p>
+                    <h1>bucket hat lavander</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_cup-2.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 2, 000.00</p>
+                    <h1>bucket hat orange</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_cup-3.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 1, 500.00</p>
+                    <h1>secret tucker hat white</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_jeans-1.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 4, 899.00</p>
+                    <h1>carpenter jean </h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_jeans-2.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 4, 899.00</p>
+                    <h1>boucle wide leg trouser </h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_jeans-3.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 4, 899.00</p>
+                    <h1>carpenter pant lavander</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_slippers-1.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 1, 200.00</p>
+                    <h1>mascot slippers black</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+
+            <div class="product_card">
+
+                <div class="product_image">
+                    <img src="assets/sample_slippers-2.png" alt="">
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 1, 200.00</p>
+                    <h1>mascot slippers white</h1>
+                </div>
+
+                <div class="btn_press">
+                    
+                    
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                       
+                </div>
+
+            </div>
+
+    
+    
+           
+           
+        </div>
+    </section>
+
+    
+
+    <section class="shop" id="newarr_section" style="display: none;">
+
+       
+        <div class="shop_page">
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-5.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>faded maroon</h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-6.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>camp shirt neopoIItan</h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-7.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>mascot tee green </h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-8.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>love tee green </h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-2.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>faded oIIve</h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-9.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>rashguard lavander </h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-10.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>hoodie burgundy</h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-11.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>curduroy burgundy </h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-12.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>sweater burgundy </h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-13.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>scrIbble core pIaId </h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+            
+            <div class="product_card">
+
+                <div class="product_image">
+
+                    <img src="assets/sample_arriv-14.png" alt="">
+
+                </div>
+
+                <div class="product_name">
+                    <p class="srp">P 3 ,399.00</p>
+
+                    <h1>burgundy off/white </h1>
+                    
+                </div>
+
+                <div class="btn_press">
+                   
+                    <button class="btn" onclick="addCart()">Add to cart</button>
+                    
+                </div>
+
+            </div>
+
+
+        </div>
+        
+    </section>
+
+
+    <secttion class="scrap_page" id="scrap_section" style="display: none;">
+        
+        <div class="top">
+            <img src="assets/sample_drew.png" alt="">
+        </div>
+
+        <div class="container">
+            
+            <div class="photo-card">
+                <img src="assets/sample_scrap1.webp" alt="">
+
+                <div class="content">
+                    <p>09/08/2022</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="assets/sample_scrap2.jpg" alt="">
+
+                <div class="content">
+                    <p>summer of '21</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="assets/sample_scrap3.webp" alt="">
+
+                <div class="content">
+                    <p>sprIng mascot 2022</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="assets/sample_scrap4.webp" alt="">
+
+                <div class="content">
+                    <p>fall mascot scrapbook</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="assets/sample_scrap5.webp" alt="">
+
+                <div class="content">
+                    <p>dIsty floral</p>
+                </div>
+            </div>
+        </div>
+
+    </secttion>
+
+
+    <section class="garage" id="garage_section" style="display: none;"> 
+
+        <div class="garage-page">
+
+            <div class="garage-img">
+                <img onclick="showShop(event)" src="assets/sample_garage.png" alt="">
+    
+             </div>
+
+             
+
+             <div class="email">
+                <input class="inputs" type="email" name="" id="" placeholder="Email">
+                <button class="btns" id="signup" onclick="subscribe()">Subscribe</button>
+             </div>
+        </div>
+
+    </section>
+    
+
+    <div class="pre-footer" id="pre-footer">
+        
+        <div class="header-content">
+
+                <div class="pre-footer-bg">
+                    <img src="assets/sample_pre-footer.png" alt="">
+                </div>
+            <h1>join the communtity</h1>
+
+            <div class="email-container">
+                <input type="email" placeholder="Email" id="email">
+                <button class="btn-footer" onclick="subscribe()">subscribe</button>
+            </div>
+        </div>
+
+        
+    </div>
+
+</body>
+<script src="assets/show.js"></script>
+</html>
